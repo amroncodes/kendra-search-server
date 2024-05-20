@@ -4,7 +4,10 @@
   "description": "Server side app that interacts with the Amazon Kendra API to power a search experience. ",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+
   },
   "author": "",
   "license": "ISC",
@@ -12,5 +15,8 @@
     "aws-sdk": "^2.1618.0",
     "cors": "^2.8.5",
     "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
   }
 }
