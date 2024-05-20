@@ -1,0 +1,16 @@
+{
+  "name": "kendraapp-server",
+  "version": "1.0.0",
+  "description": "Server side app that interacts with the Amazon Kendra API to power a search experience. ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.1618.0",
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  }
+}
