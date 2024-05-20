@@ -2,6 +2,7 @@ const express = require('express');
 const AWS = require('aws-sdk');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+require('dotenv').config();
 
 // Create an Express app
 const app = express();
@@ -11,7 +12,7 @@ app.use(bodyParser.json());
 
 // Initialize the Amazon Kendra client
 const kendra = new AWS.Kendra({ region: 'us-west-2' });
-const indexId = '887dcdef-f897-438c-8ebe-56256630f51c';
+const indexId = process.env.INDEX_ID;
 
 // Function to search with Amazon Kendra
 async function searchWithKendra(query, indexId) {
