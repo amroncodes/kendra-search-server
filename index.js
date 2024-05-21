@@ -11,7 +11,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // Initialize the Amazon Kendra client
-const kendra = new AWS.Kendra({ region: 'us-west-2' });
+const kendra = new AWS.Kendra({ region: process.env.AWS_REGION });
 const indexId = process.env.INDEX_ID;
 
 // Function to search with Amazon Kendra
