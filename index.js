@@ -152,6 +152,8 @@ async function getResultsHelper(
       dataReady: true,
       error: undefined,
     };
+
+    console.log("Total results count:", results.ResultItems.length);
     
 
     return responseData;
@@ -207,6 +209,8 @@ app.post('/search', async (req, res) => {
 };
   try {
       const results = await kendra.query(queryRequest).promise();
+      console.log(`Total results in page ${PageNumber}:`, results.ResultItems.length);
+      console.log("Total result count", results.TotalNumberOfResults)
       res.json(results);
   } catch (error) {
       console.error('Error searching with Kendra:', error);
